@@ -19,4 +19,9 @@ public class FloatData : ScriptableObject
     {
         value = 0f;
     }
+
+    public void DebugValue()
+    {
+        Debug.Log(this.name + " has a value of " + value);
+    }
 }
