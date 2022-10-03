@@ -7,8 +7,16 @@ public class DestroyBehaviour : MonoBehaviour
     private WaitForSeconds wfsObj;
     private IEnumerator Start()
     {
-        wfsObj = new WaitForSeconds(seconds);
-        yield return wfsObj;
+        if (seconds > 0)
+        {
+            wfsObj = new WaitForSeconds(seconds);
+            yield return wfsObj;
+            Destroy(gameObject);
+        }
+    }
+
+    public void DestroyMyself()
+    {
         Destroy(gameObject);
     }
 }
